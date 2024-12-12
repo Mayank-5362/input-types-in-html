@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Input Types</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        input[type="submit"],
+        input[type="reset"],
+        input[type="button"] {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover,
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            padding: 0;
+        }
+
+        input[type="image"] {
+            width: 150px;
+            height: 150px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .flex-container .input-group {
+            width: 48%;
+        }
+
+        .flex-container .input-group label {
+            font-size: 14px;
+        }
+
+        .hidden-input {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Form with All 22 Input Types</h1>
+    <form action="/submit" method="POST">
+
+        <div class="flex-container">
+            <!-- Text Input -->
+            <div class="input-group">
+                <label for="text">Text Input:</label>
+                <input type="text" id="text" name="text"><br><br>
+            </div>
+
+            <!-- Password Input -->
+            <div class="input-group">
+                <label for="password">Password Input:</label>
+                <input type="password" id="password" name="password"><br><br>
+            </div>
+
+            <!-- Email Input -->
+            <div class="input-group">
+                <label for="email">Email Input:</label>
+                <input type="email" id="email" name="email"><br><br>
+            </div>
+
+            <!-- Telephone Input -->
+            <div class="input-group">
+                <label for="tel">Telephone Input:</label>
+                <input type="tel" id="tel" name="tel"><br><br>
+            </div>
+
+            <!-- Number Input -->
+            <div class="input-group">
+                <label for="number">Number Input:</label>
+                <input type="number" id="number" name="number" min="1" max="100"><br><br>
+            </div>
+
+            <!-- Range Input -->
+            <div class="input-group">
+                <label for="range">Range Input:</label>
+                <input type="range" id="range" name="range" min="1" max="10"><br><br>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <!-- Date Input -->
+            <div class="input-group">
+                <label for="date">Date Input:</label>
+                <input type="date" id="date" name="date"><br><br>
+            </div>
+
+            <!-- Month Input -->
+            <div class="input-group">
+                <label for="month">Month Input:</label>
+                <input type="month" id="month" name="month"><br><br>
+            </div>
+
+            <!-- Week Input -->
+            <div class="input-group">
+                <label for="week">Week Input:</label>
+                <input type="week" id="week" name="week"><br><br>
+            </div>
+
+            <!-- Time Input -->
+            <div class="input-group">
+                <label for="time">Time Input:</label>
+                <input type="time" id="time" name="time"><br><br>
+            </div>
+
+            <!-- DateTime-Local Input -->
+            <div class="input-group">
+                <label for="datetime-local">DateTime-Local Input:</label>
+                <input type="datetime-local" id="datetime-local" name="datetime-local"><br><br>
+            </div>
+
+            <!-- File Input -->
+            <div class="input-group">
+                <label for="file">File Input:</label>
+                <input type="file" id="file" name="file"><br><br>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <!-- Checkbox Input -->
+            <div class="input-group">
+                <label for="checkbox">Checkbox Input:</label>
+                <input type="checkbox" id="checkbox" name="checkbox" value="yes"> Subscribe<br><br>
+            </div>
+
+            <!-- Radio Input -->
+            <div class="input-group">
+                <label for="radio">Radio Input:</label>
+                <input type="radio" id="radio1" name="radio" value="option1"> Option 1
+                <input type="radio" id="radio2" name="radio" value="option2"> Option 2<br><br>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="input-group">
+            <input type="submit" value="Submit">
+        </div>
+
+        <!-- Reset Button -->
+        <div class="input-group">
+            <input type="reset" value="Reset">
+        </div>
+
+        <!-- Button Input -->
+        <div class="input-group">
+            <input type="button" value="Click Me">
+        </div>
+
+        <!-- Search Input -->
+        <div class="input-group">
+            <label for="search">Search Input:</label>
+            <input type="search" id="search" name="search"><br><br>
+        </div>
+
+        <!-- URL Input -->
+        <div class="input-group">
+            <label for="url">URL Input:</label>
+            <input type="url" id="url" name="url"><br><br>
+        </div>
+
+        <!-- Color Input -->
+        <div class="input-group">
+            <label for="color">Color Input:</label>
+            <input type="color" id="color" name="color"><br><br>
+        </div>
+
+        <!-- Image Input -->
+        <div class="input-group">
+            <input type="image" src="https://via.placeholder.com/150" alt="Submit Image"><br><br>
+        </div>
+
+        <!-- Hidden Input -->
+        <div class="hidden-input">
+            <input type="hidden" name="hidden" value="secret_value">
+        </div>
+
+    </form>
+
+</body>
+</html>
